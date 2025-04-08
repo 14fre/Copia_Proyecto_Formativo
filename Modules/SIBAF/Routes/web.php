@@ -11,6 +11,10 @@
 |
 */
 
-Route::prefix('sibaf')->group(function() {
-    Route::get('/', 'SIBAFController@index');
+Route::middleware(['lang'])->group(function(){
+    Route::prefix('sibaf')->group(function() {
+        Route::get('/index', 'SIBAFController@index')->name('cefa.sibaf.index');
+        Route::get('/admin/welcome', 'SIBAFController@admin')->name('sibaf.admin.welcome');
+        
+    });
 });

@@ -17,6 +17,17 @@ class SIBAFController extends Controller
         return view('sibaf::index');
     }
 
+    public function welcome()
+    {
+        return view('sibaf::welcome');
+    }
+
+    public function admin()
+    {
+        return view('sibaf::welcome');
+    }
+
+
     /**
      * Show the form for creating a new resource.
      * @return Renderable

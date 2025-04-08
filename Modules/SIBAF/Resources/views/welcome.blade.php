@@ -1,4 +1,4 @@
-@extends('sibaf::layouts.masterusers')
+@extends('sibaf::layouts.master')
 
 @section('content')
     <h1>Hello World</h1>
