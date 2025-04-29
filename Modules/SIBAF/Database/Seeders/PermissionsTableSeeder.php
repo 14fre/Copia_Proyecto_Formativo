@@ -18,7 +18,7 @@ class PermissionsTableSeeder extends Seeder
     {
         // Crear una lista de permisos para el rol 
         $permissions_admin = []; // Lista de permisos para el rol de administrador
-        
+        $permissions_soporte = [];
         // Consultar aplicación SICA para registrar los roles
         $app = App::where('name', 'SIBAF')->first();
 
@@ -37,9 +37,35 @@ class PermissionsTableSeeder extends Seeder
         // Consulta de ROLES
         $rol_admin = Role::where('slug', 'sibaf.admin')->first(); // Rol Administrador
        
-
         // Asignación de PERMISOS para los ROLES de la aplicación AGROSOFT (Sincronización de las relaciones sin eliminar las relaciones existentes)
         $rol_admin->permissions()->syncWithoutDetaching($permissions_admin);
+
+
+        // asignación de permisos para el rol de soporte
+        $permissions_soporte = []; // Lista de permisos para el rol de soporte  
+        
+        
+         // Consultar aplicación SICA para registrar los roles
+         $app = App::where('name', 'SIBAF')->first();
+          // Vista de configuración (Soporte)
+         $permission = Permission::updateOrCreate(['slug' => 'sibaf.soporte.welcomesoporte'], [ // Registro o actualización de permiso
+             'name' => 'Acceso al Rol de soporte',
+             'description' => 'Acceso al Rol de soporte',
+             'description_english' => 'Access to the support role',
+             'app_id' => $app->id
+         ]);
+         $permissions_soporte[] = $permission->id; // Almacenar permiso para rol
+ 
+      
+ 
+         // Consulta de ROLES
+         $rol_soporte = Role::where('slug', 'sibaf.soporte')->first(); // Rol Soporte
+        
+ 
+         // Asignación de PERMISOS para los ROLES de la aplicación AGROSOFT (Sincronización de las relaciones sin eliminar las relaciones existentes)
+         $rol_soporte->permissions()->syncWithoutDetaching($permissions_soporte);
+ 
+
       
     }
 }

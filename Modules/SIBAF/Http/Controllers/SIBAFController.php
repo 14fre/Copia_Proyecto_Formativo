@@ -26,6 +26,10 @@ class SIBAFController extends Controller
     {
         return view('sibaf::welcome');
     }
+    public function soporte()
+    {
+        return view('sibaf::welcomesoporte');
+    }
 
 
     /**
