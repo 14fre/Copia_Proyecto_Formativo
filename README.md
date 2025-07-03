@@ -49,7 +49,7 @@ SICEFADOS es un sistema web desarrollado para la gestión de inventarios, equipo
 
 ## Integrantes del equipo
 - Freimar Espitia (14fre)
-- [Agrega aquí los nombres de los demás integrantes]
+- Breiner Andrez llanos 
 
 ## Instalación y ejecución
 1. Clona el repositorio:
