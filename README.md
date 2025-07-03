@@ -9,7 +9,7 @@
 
 ## About Laravel
 
-# SICEFADOS - Módulo de Gestión de Equipos
+# SIBAF - Módulo de Gestión de Equipos
 
 ## Descripción
 SICEFADOS es un sistema web desarrollado para la gestión de inventarios, equipos y solicitudes de baja en ambientes institucionales. Permite registrar, visualizar y reportar elementos asignados a diferentes ambientes y responsables, facilitando la administración y el control de los recursos físicos, y asi reduciendo la carga manual de trabaja  continuio.
